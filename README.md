@@ -22,8 +22,6 @@ Selected `distilbert-base-cased-distilled-squad` because:
 
 **Alternative**: `facebook/bart-large-cnn` (summarization) - QA prioritized for RAG focus.
 
-## 🔌 API Usage Description
-
 ## 🏃‍♂️ AGILE Process (5 Sprints)
 | 1 | File upload | ✅ |
 | 2 | Local baseline | ✅ |
@@ -32,6 +30,8 @@ Selected `distilbert-base-cased-distilled-squad` because:
 | 5 | Production prep | ✅ |
 
 ## 💡 Responsible AI Reflection
-The `distilbert-base-cased-distilled-squad` model enables powerful document QA but requires ethical safeguards. **Strengths**: Extractive QA ensures answers stay 100% grounded in source documents, eliminating hallucinations. **Bias risks**: SQuAD training data is English/Wikipedia-centric, potentially underperforming on non-Western topics, technical jargon, or underrepresented demographics. **Privacy**: Documents transmitted to Hugging Face servers—requires explicit user consent via clear UI warnings.
+The `distilbert-base-cased-distilled-squad` model enables powerful document QA but requires ethical safeguards. 
+**Strengths**: Extractive QA ensures answers stay 100% grounded in source documents, eliminating hallucinations. 
+**Bias risks**: SQuAD training data is English/Wikipedia-centric, potentially underperforming on non-Western topics, technical jargon, or underrepresented demographics. **Privacy**: Documents transmitted to Hugging Face servers—requires explicit user consent via clear UI warnings.
 **Mitigations**: Local fallback processing, confidence score transparency, document previews, context truncation. **RAG advantage**: Every answer traces directly to source text for verification. Responsible deployment matches capabilities to context: ideal for document lookup/education, inappropriate for medical/legal decisions without human oversight. Transparency about data flows, model limitations, and boundaries builds essential user trust.
 
