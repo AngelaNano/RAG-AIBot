@@ -1,27 +1,23 @@
-# Mini RAG Chatbot - Streamlit Document Q&A
+# 💬 Mini RAG Chatbot - Hugging Face Streamlit App
 
-## Overview
-Streamlit app for summarizing TXT/CSV files and answering questions about their content. Built with local processing (no external APIs required). Supports both summarization and keyword-based Q&A.
+**Applied AI & RAG Foundations** | Streamlit app using **Hugging Face Inference API** for document Q&A and summarization.
 
-## Model/Source
-- **Approach**: Pure Python heuristics (sentence scoring + keyword matching)
-- **Libraries**: Streamlit, Pandas (CSV parsing), no pretrained models
-- **Source**: 100% custom code, open source (MIT license)
+## 🎯 Project Overview
+Streamlit chatbot that answers questions about uploaded TXT/CSV files using Hugging Face NLP models. Supports both **summarization** and **domain-specific Q&A** with full RAG context injection.
 
-## Model Selection Rationale
-Chose **rule-based local processing** over Hugging Face/OpenAI APIs because:
-- **Zero cost/quotas**: Perfect for classroom demos and unlimited usage
-- **Transparency**: All logic visible/auditable (no black box models)
-- **Privacy**: Documents stay local, no data sent to external services
-- **Speed**: Instant responses vs API latency
-- **AGILE-friendly**: Easy to iterate (5 sprints: file upload → CSV → summary → Q&A → UI polish)
+## 🤗 Model Name & Source
+- **Model**: `distilbert-base-cased-distilled-squad` (Question-Answering)
+- **Source**: Hugging Face Model Hub
+- **API**: Hugging Face Inference API (`https://api-inference.huggingface.co/models/`)
 
+## ✅ Rationale for Model Selection
+**distilbert-base-cased-distilled-squad** was selected because:
+1. **RAG-Optimized**: Specifically fine-tuned for extractive QA from document context
+2. **Lightweight**: 66M parameters, fast inference (<1s), CPU-friendly  
+3. **Proven**: SOTA on SQuAD benchmark, battle-tested in production
+4. **Free Tier**: Hugging Face Inference API free tier perfect for class project
+5. **Transparent**: Open weights, full training details available
 
-## API Usage
-No external APIs used. Processing pipeline:
-1. **File → Text**: Pandas for CSV→string, raw decode for TXT
-2. **Summary**: Score sentences by uniqueness + length → top 3
-3. **Q&A**: Keyword overlap matching across all sentences
-4. **RAG**: Full document context always injected into processing
+**Alternative considered**: `facebook/bart-large-cnn` (summarization) - DistilBERT chosen for primary Q&A focus.
 
-## AGILE Process (5 Sprints)
+## 🔌 API Usage Description
