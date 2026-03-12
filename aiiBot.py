@@ -7,7 +7,7 @@ import io
 
 # ---- Setup ----
 load_dotenv()
-HF_API_KEY = os.getenv("HUGGINGFACE_API_KEY")  # Optional: https://huggingface.co/settings/tokens
+HF_API_KEY = os.getenv("HUGGINGFACE_API_KEY")
 
 # ---- UI ----
 st.set_page_config(page_title="Mini RAG Chatbot", page_icon="💬")
