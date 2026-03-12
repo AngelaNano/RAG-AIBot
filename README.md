@@ -22,7 +22,7 @@ Selected `distilbert-base-cased-distilled-squad` because:
 
 **Alternative**: `facebook/bart-large-cnn` (summarization) - QA prioritized for RAG focus.
 
-## 🏃‍♂️ AGILE Process (5 Sprints)
+## 🏃‍♂️ AGILE Process
 | 1 | File upload | ✅ |
 | 2 | Local baseline | ✅ |
 | 3 | HF Integration | ✅ |
