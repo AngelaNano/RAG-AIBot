@@ -1,18 +1,51 @@
-# API key
+text
+# API keys and secrets
 .env
 
-# Python
+# Python bytecode and caches
 __pycache__/
 *.pyc
 *.pyo
+*.pyd
+.Python
+build/
+dist/
+*.egg-info/
+.installed.cfg
+*.egg
 
-# Streamlit  
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Streamlit cache
 .streamlit/
 
-# IDE
+# IDE/editor files
 .vscode/
 .idea/
+*.sublime-project
+*.sublime-workspace
 
-# OS
+# OS generated files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+# Deployment
+*.streamlitsecrets.toml
