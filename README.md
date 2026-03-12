@@ -1,7 +1,7 @@
 # Mini RAG Chatbot - Streamlit Document Q&A
 
 ## Overview
-Streamlit app for summarizing TXT/CSV files and answering questions about their content. Built with local processing (no external APIs required). Supports both summarization (top 3 sentences) and keyword-based Q&A.
+Streamlit app for summarizing TXT/CSV files and answering questions about their content. Built with local processing (no external APIs required). Supports both summarization and keyword-based Q&A.
 
 ## Model/Source
 - **Approach**: Pure Python heuristics (sentence scoring + keyword matching)
