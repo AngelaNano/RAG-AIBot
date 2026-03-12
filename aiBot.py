@@ -147,7 +147,6 @@ if task_type == "Q&A over document":
             st.subheader("💬 **Answer**")
             st.markdown(answer)
 
-# Footer - MODEL INFO FOR ASSIGNMENT
 st.markdown("---")
 st.caption("🤗 **Model**: `distilbert/distilbert-base-cased-distilled-squad`")
 st.caption("📚 **Source**: https://huggingface.co/distilbert/distilbert-base-cased-distilled-squad")
